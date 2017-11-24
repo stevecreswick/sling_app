@@ -1,0 +1,8 @@
+## Name of the node
+-name ${NODE_NAME}
+
+## Cookie for distributed erlang
+-setcookie ${COOKIE}
+
+## App Settings
+-phoenix_environment_settings port ${PORT}

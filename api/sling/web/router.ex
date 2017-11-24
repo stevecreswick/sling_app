@@ -5,7 +5,9 @@ defmodule Sling.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", Sling do
+  scope "/api", Sling.Web do
     pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 end
