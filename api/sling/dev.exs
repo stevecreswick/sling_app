@@ -13,3 +13,6 @@ config :phoenix_environment_settings, PhoenixEnvironmentSettings.Repo,
   database: System.get_env("DB_NAME") || "phoenix_environment_settings_dev",
   hostname: System.get_env("DB_HOST") || "localhost",
   pool_size: 10
+
+config :guardian, Guardian,
+  secret_key: "cud/Cyi0bd5nfS8ldGzzwBLIzmzFTfWKPR6Rpa1l6T95V0TJ4QAuW1r2oW6wfwvE"

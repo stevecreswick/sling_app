@@ -20,3 +20,6 @@ config :phoenix_environment_settings, PhoenixEnvironmentSettings.Repo,
   database: "${DB_NAME}",
   hostname: "${DB_HOST}",
   pool_size: 20
+
+config :guardian, Guardian,
+  secret_key: System.get_env("GUARDIAN_SECRET_KEY")
