@@ -1,4 +1,4 @@
-defmodule SlingWeb.ChangesetView do
+defmodule Sling.Web.ChangesetView do
   use Sling.Web, :view
 
   @doc """

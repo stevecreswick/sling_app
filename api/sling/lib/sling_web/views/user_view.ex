@@ -1,4 +1,4 @@
-defmodule SlingWeb.UserView do
+defmodule Sling.Web.UserView do
   use Sling.Web, :view
   alias Sling.Web.UserView
 

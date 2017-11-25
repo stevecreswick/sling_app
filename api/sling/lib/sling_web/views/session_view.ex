@@ -1,9 +1,9 @@
-defmodule Sling.SessionView do
+defmodule Sling.Web.SessionView do
   use Sling.Web, :view
 
   def render("show.json", %{user: user, jwt: jwt}) do
     %{
-      data: render_one(user, Sling.UserView, "user.json"),
+      data: render_one(user, Sling.Web.UserView, "user.json"),
       meta: %{token: jwt}
     }
   end

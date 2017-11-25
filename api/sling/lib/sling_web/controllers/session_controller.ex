@@ -1,4 +1,4 @@
-defmodule Sling.SessionController do
+defmodule Sling.Web.SessionController do
   use Sling.Web, :controller
 
   def create(conn, params) do
@@ -46,11 +46,11 @@ defmodule Sling.SessionController do
   def unauthenticated(conn, _params) do
     conn
     |> put_status(:forbidden)
-    |> render(Sling.SessionView, "forbidden.json", error: "Not Authenticated")
+    |> render(Sling.Web.SessionView, "forbidden.json", error: "Not Authenticated")
   end
 
   defp authenticate(%{"email" => email, "password" => password}) do
-    user = Repo.get_by(Sling.User, email: String.downcase(email))
+    user = Repo.get_by(Sling.Accounts.User, email: String.downcase(email))
 
     case check_password(user, password) do
       true -> {:ok, user}
