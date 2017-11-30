@@ -10,7 +10,7 @@ type Props = {
   willAuthenticate: boolean,
 }
 
-const AuthenticationRedirect = ({
+const PublicRoute = ({
   pattern,
   exactly,
   isAuthenticated,
@@ -28,4 +28,4 @@ const AuthenticationRedirect = ({
     }}
   />;
 
-export default AuthenticationRedirect;
+export default PublicRoute;
